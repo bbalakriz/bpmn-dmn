@@ -10,8 +10,10 @@
   <dmn:businessKnowledgeModel id="_CD975BC5-27E5-47BC-BF3B-C246E930B50A" name="BMI Formula">
     <dmn:variable id="_53BBB852-0037-4D9F-BB21-1B01B71A24E1" name="BMI Formula"/>
     <dmn:encapsulatedLogic id="_0D5E5ECC-64F9-424A-AF67-0B3AE25E3E75" kind="FEEL">
+      <dmn:formalParameter id="_FCED3C8B-57C5-4675-90F3-D6359E538FDB" name="H" typeRef="number"/>
+      <dmn:formalParameter id="_D2B9D8AD-3FEA-43DF-92F2-ED541C137D04" name="W" typeRef="number"/>
       <dmn:literalExpression id="_08256F16-1171-48EF-9186-9839EE453530">
-        <dmn:text></dmn:text>
+        <dmn:text>decimal((W/H**2) * 1000, 1)</dmn:text>
       </dmn:literalExpression>
     </dmn:encapsulatedLogic>
   </dmn:businessKnowledgeModel>
@@ -45,7 +47,9 @@
     <dmndi:DMNDiagram>
       <di:extension>
         <kie:ComponentsWidthsExtension>
-          <kie:ComponentWidths dmnElementRef="_08256F16-1171-48EF-9186-9839EE453530"/>
+          <kie:ComponentWidths dmnElementRef="_08256F16-1171-48EF-9186-9839EE453530">
+            <kie:width>391.0</kie:width>
+          </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_812F3F67-AC2B-412E-85B7-AEDEFF3EDA4C">
             <kie:width>50.0</kie:width>
             <kie:width>100.0</kie:width>
