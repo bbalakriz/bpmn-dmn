@@ -29,7 +29,15 @@
     <dmn:context id="_812F3F67-AC2B-412E-85B7-AEDEFF3EDA4C">
       <dmn:contextEntry>
         <dmn:variable id="_27D046F6-0317-4602-99A0-11AA2EDCE739" name="BMI Score" typeRef="number"/>
-        <dmn:literalExpression/>
+        <dmn:invocation id="_F1F78FFF-BBBA-427B-83C3-E77CA9841D1F">
+          <dmn:literalExpression id="_E8D3B386-AA2A-484B-99EB-99FB283EC4B1">
+            <dmn:text>BMI Formula</dmn:text>
+          </dmn:literalExpression>
+          <dmn:binding>
+            <dmn:parameter id="_E34D3817-26E2-4C52-AF2F-3EA2364F28AF" name="p-1"/>
+            <dmn:literalExpression/>
+          </dmn:binding>
+        </dmn:invocation>
       </dmn:contextEntry>
     </dmn:context>
   </dmn:decision>
@@ -43,6 +51,12 @@
             <kie:width>100.0</kie:width>
             <kie:width>474.0</kie:width>
           </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_F1F78FFF-BBBA-427B-83C3-E77CA9841D1F">
+            <kie:width>50.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>304.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_E8D3B386-AA2A-484B-99EB-99FB283EC4B1"/>
         </kie:ComponentsWidthsExtension>
       </di:extension>
       <dmndi:DMNShape id="dmnshape-_CD975BC5-27E5-47BC-BF3B-C246E930B50A" dmnElementRef="_CD975BC5-27E5-47BC-BF3B-C246E930B50A" isCollapsed="false">
