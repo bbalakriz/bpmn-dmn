@@ -7,6 +7,14 @@
   <dmn:inputData id="_7100AFD8-C086-464B-B7B8-59675EF45D7A" name="Height">
     <dmn:variable id="_4A2F3E38-A694-4AF3-91B2-E4BA5D2F11C8" name="Height"/>
   </dmn:inputData>
+  <dmn:businessKnowledgeModel id="_CD975BC5-27E5-47BC-BF3B-C246E930B50A" name="BMI Formula">
+    <dmn:variable id="_53BBB852-0037-4D9F-BB21-1B01B71A24E1" name="BMI Formula"/>
+    <dmn:encapsulatedLogic id="_0D5E5ECC-64F9-424A-AF67-0B3AE25E3E75" kind="FEEL">
+      <dmn:literalExpression id="_08256F16-1171-48EF-9186-9839EE453530">
+        <dmn:text></dmn:text>
+      </dmn:literalExpression>
+    </dmn:encapsulatedLogic>
+  </dmn:businessKnowledgeModel>
   <dmn:decision id="_6855BD6E-CED4-483A-A217-BF6B204BD0F2" name="Find BMI">
     <dmn:variable id="_CB3AEE74-9D04-474B-9E63-C82A88201017" name="Find BMI"/>
     <dmn:informationRequirement id="_27001FC6-8270-4F6A-947B-DCFEDA6D00FB">
@@ -15,6 +23,9 @@
     <dmn:informationRequirement id="_43576C0D-82ED-4146-9559-6BD98D435C04">
       <dmn:requiredInput href="#_C94D28D7-4AE6-47E0-B44B-B080A625FF21"/>
     </dmn:informationRequirement>
+    <dmn:knowledgeRequirement id="_D6CFE671-3F3D-4991-A26F-0584F1CD560D">
+      <dmn:requiredKnowledge href="#_CD975BC5-27E5-47BC-BF3B-C246E930B50A"/>
+    </dmn:knowledgeRequirement>
     <dmn:context id="_812F3F67-AC2B-412E-85B7-AEDEFF3EDA4C">
       <dmn:contextEntry>
         <dmn:variable id="_27D046F6-0317-4602-99A0-11AA2EDCE739" name="BMI Score" typeRef="number"/>
@@ -26,6 +37,7 @@
     <dmndi:DMNDiagram>
       <di:extension>
         <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_08256F16-1171-48EF-9186-9839EE453530"/>
           <kie:ComponentWidths dmnElementRef="_812F3F67-AC2B-412E-85B7-AEDEFF3EDA4C">
             <kie:width>50.0</kie:width>
             <kie:width>100.0</kie:width>
@@ -33,6 +45,15 @@
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
+      <dmndi:DMNShape id="dmnshape-_CD975BC5-27E5-47BC-BF3B-C246E930B50A" dmnElementRef="_CD975BC5-27E5-47BC-BF3B-C246E930B50A" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="576" y="80" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_7100AFD8-C086-464B-B7B8-59675EF45D7A" dmnElementRef="_7100AFD8-C086-464B-B7B8-59675EF45D7A" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -67,6 +88,10 @@
       <dmndi:DMNEdge id="dmnedge-_43576C0D-82ED-4146-9559-6BD98D435C04" dmnElementRef="_43576C0D-82ED-4146-9559-6BD98D435C04">
         <di:waypoint x="474" y="180"/>
         <di:waypoint x="408" y="131"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_D6CFE671-3F3D-4991-A26F-0584F1CD560D" dmnElementRef="_D6CFE671-3F3D-4991-A26F-0584F1CD560D">
+        <di:waypoint x="576" y="105"/>
+        <di:waypoint x="458" y="106"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
