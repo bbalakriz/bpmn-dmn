@@ -13,7 +13,7 @@
       <dmn:formalParameter id="_FCED3C8B-57C5-4675-90F3-D6359E538FDB" name="H" typeRef="number"/>
       <dmn:formalParameter id="_D2B9D8AD-3FEA-43DF-92F2-ED541C137D04" name="W" typeRef="number"/>
       <dmn:literalExpression id="_08256F16-1171-48EF-9186-9839EE453530">
-        <dmn:text>decimal((W/H**2) * 1000, 1)</dmn:text>
+        <dmn:text>decimal((W/H**2) * 10000, 1)</dmn:text>
       </dmn:literalExpression>
     </dmn:encapsulatedLogic>
   </dmn:businessKnowledgeModel>
@@ -104,7 +104,7 @@
       <di:extension>
         <kie:ComponentsWidthsExtension>
           <kie:ComponentWidths dmnElementRef="_08256F16-1171-48EF-9186-9839EE453530">
-            <kie:width>391.0</kie:width>
+            <kie:width>565.0</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_812F3F67-AC2B-412E-85B7-AEDEFF3EDA4C">
             <kie:width>50.0</kie:width>
