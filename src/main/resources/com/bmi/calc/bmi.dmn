@@ -8,7 +8,7 @@
     <dmn:variable id="_4A2F3E38-A694-4AF3-91B2-E4BA5D2F11C8" name="Height"/>
   </dmn:inputData>
   <dmn:businessKnowledgeModel id="_CD975BC5-27E5-47BC-BF3B-C246E930B50A" name="BMI Formula">
-    <dmn:variable id="_53BBB852-0037-4D9F-BB21-1B01B71A24E1" name="BMI Formula"/>
+    <dmn:variable id="_53BBB852-0037-4D9F-BB21-1B01B71A24E1" name="BMI Formula" typeRef="number"/>
     <dmn:encapsulatedLogic id="_0D5E5ECC-64F9-424A-AF67-0B3AE25E3E75" kind="FEEL">
       <dmn:formalParameter id="_FCED3C8B-57C5-4675-90F3-D6359E538FDB" name="H" typeRef="number"/>
       <dmn:formalParameter id="_D2B9D8AD-3FEA-43DF-92F2-ED541C137D04" name="W" typeRef="number"/>
