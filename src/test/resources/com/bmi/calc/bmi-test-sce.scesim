@@ -1,0 +1,122 @@
+<ScenarioSimulationModel version="1.5">
+  <simulation>
+    <simulationDescriptor>
+      <factMappings>
+        <FactMapping>
+          <expressionElements class="linked-list"/>
+          <expressionIdentifier>
+            <name>Index</name>
+            <type>OTHER</type>
+          </expressionIdentifier>
+          <factIdentifier>
+            <name>#</name>
+            <className>java.lang.Integer</className>
+          </factIdentifier>
+          <className>java.lang.Integer</className>
+          <factAlias>#</factAlias>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements class="linked-list"/>
+          <expressionIdentifier>
+            <name>Description</name>
+            <type>OTHER</type>
+          </expressionIdentifier>
+          <factIdentifier>
+            <name>Scenario description</name>
+            <className>java.lang.String</className>
+          </factIdentifier>
+          <className>java.lang.String</className>
+          <factAlias>Scenario description</factAlias>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements class="linked-list">
+            <ExpressionElement>
+              <step>Height</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>0|1</name>
+            <type>GIVEN</type>
+          </expressionIdentifier>
+          <factIdentifier>
+            <name>Height</name>
+            <className>Height</className>
+          </factIdentifier>
+          <className>Any</className>
+          <factAlias>Height</factAlias>
+          <expressionAlias>value</expressionAlias>
+          <genericTypes/>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements class="linked-list">
+            <ExpressionElement>
+              <step>Weight</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>0|2</name>
+            <type>GIVEN</type>
+          </expressionIdentifier>
+          <factIdentifier>
+            <name>Weight</name>
+            <className>Weight</className>
+          </factIdentifier>
+          <className>Any</className>
+          <factAlias>Weight</factAlias>
+          <expressionAlias>value</expressionAlias>
+          <genericTypes/>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements class="linked-list">
+            <ExpressionElement>
+              <step>Find BMI</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>0|3</name>
+            <type>EXPECT</type>
+          </expressionIdentifier>
+          <factIdentifier>
+            <name>Find BMI</name>
+            <className>Find BMI</className>
+          </factIdentifier>
+          <className>Any</className>
+          <factAlias>Find BMI</factAlias>
+          <expressionAlias>value</expressionAlias>
+          <genericTypes/>
+        </FactMapping>
+      </factMappings>
+      <dmnFilePath>src/main/resources/com/bmi/calc/bmi.dmn</dmnFilePath>
+      <type>DMN</type>
+      <dmnNamespace>https://kiegroup.org/dmn/_A01BA340-289F-4255-9F73-E68C8F568770</dmnNamespace>
+      <dmnName>bmi</dmnName>
+      <skipFromBuild>false</skipFromBuild>
+    </simulationDescriptor>
+    <scenarios class="linked-list">
+      <Scenario>
+        <factMappingValues>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[2]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[2]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[3]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[3]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[4]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[4]/expressionIdentifier"/>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[5]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[5]/expressionIdentifier"/>
+          </FactMappingValue>
+        </factMappingValues>
+        <simulationDescriptor reference="../../../simulationDescriptor"/>
+      </Scenario>
+    </scenarios>
+  </simulation>
+  <imports>
+    <imports/>
+  </imports>
+</ScenarioSimulationModel>
