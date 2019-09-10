@@ -36,10 +36,61 @@
             <dmn:text>BMI Formula</dmn:text>
           </dmn:literalExpression>
           <dmn:binding>
-            <dmn:parameter id="_E34D3817-26E2-4C52-AF2F-3EA2364F28AF" name="p-1"/>
-            <dmn:literalExpression/>
+            <dmn:parameter id="_E34D3817-26E2-4C52-AF2F-3EA2364F28AF" name="H" typeRef="number"/>
+            <dmn:literalExpression id="_DCDBCFD0-C5D8-41C8-AF7B-D8288D43729A">
+              <dmn:text>Height</dmn:text>
+            </dmn:literalExpression>
+          </dmn:binding>
+          <dmn:binding>
+            <dmn:parameter id="_5F45F926-CDDA-496D-A5F9-190C9E44F071" name="W" typeRef="number"/>
+            <dmn:literalExpression id="_A58BF7B3-836A-40AF-AB1D-C75FC1776558">
+              <dmn:text>Weight</dmn:text>
+            </dmn:literalExpression>
           </dmn:binding>
         </dmn:invocation>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_372E2924-F81C-4F44-828E-BBBC20082F6F" name="BMI Category" typeRef="string"/>
+        <dmn:decisionTable id="_EFB305D3-FE11-457A-B17A-6FBC6C6CEE7A" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+          <dmn:input id="_DB92F625-AD09-402F-B49A-FC21C25ADDD1">
+            <dmn:inputExpression id="_977AB116-61DE-49DB-8468-0DDFE54E0495" typeRef="number">
+              <dmn:text>BMI Score</dmn:text>
+            </dmn:inputExpression>
+          </dmn:input>
+          <dmn:output id="_2516AB70-FD95-4835-98C1-94ED6E954330" typeRef="string"/>
+          <dmn:rule id="_FB2E12FE-CC47-44B2-B078-756BB0117F32">
+            <dmn:inputEntry id="_3B869963-7C0B-4415-9597-EFD4D6F6ECAE">
+              <dmn:text>&lt;18.5</dmn:text>
+            </dmn:inputEntry>
+            <dmn:outputEntry id="_346567B0-4BDF-45DA-AD30-00FC37C89BFC">
+              <dmn:text>"Underweight"</dmn:text>
+            </dmn:outputEntry>
+          </dmn:rule>
+          <dmn:rule id="_099D0E88-C07B-4498-A427-9F80365C2139">
+            <dmn:inputEntry id="_DA5F6CF2-37B5-461C-8DEC-286F3CE43BAF">
+              <dmn:text>[18.5..25)</dmn:text>
+            </dmn:inputEntry>
+            <dmn:outputEntry id="_C152CD4D-C7DD-456B-B043-3E517A995100">
+              <dmn:text>"Normal weight"</dmn:text>
+            </dmn:outputEntry>
+          </dmn:rule>
+          <dmn:rule id="_8A22790F-FF73-4044-B7DD-E76AF7CDB904">
+            <dmn:inputEntry id="_E96E383E-B05E-41C4-8AEA-5532D9EC220C">
+              <dmn:text>[25..30)</dmn:text>
+            </dmn:inputEntry>
+            <dmn:outputEntry id="_7398DDEA-CE0C-43AB-ABED-A9CF8D73473E">
+              <dmn:text>"Overweight"</dmn:text>
+            </dmn:outputEntry>
+          </dmn:rule>
+          <dmn:rule id="_81C1AFA9-C53F-4BB2-A1EA-8AF288E33747">
+            <dmn:inputEntry id="_FBDA87DF-9F54-4552-998A-051BCB0E3DDE">
+              <dmn:text>&gt;=30</dmn:text>
+            </dmn:inputEntry>
+            <dmn:outputEntry id="_2D04C070-8188-41D0-9F34-C60547C38ECE">
+              <dmn:text>"Obese"</dmn:text>
+            </dmn:outputEntry>
+          </dmn:rule>
+        </dmn:decisionTable>
       </dmn:contextEntry>
     </dmn:context>
   </dmn:decision>
@@ -53,14 +104,26 @@
           <kie:ComponentWidths dmnElementRef="_812F3F67-AC2B-412E-85B7-AEDEFF3EDA4C">
             <kie:width>50.0</kie:width>
             <kie:width>100.0</kie:width>
-            <kie:width>474.0</kie:width>
+            <kie:width>944.0</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_F1F78FFF-BBBA-427B-83C3-E77CA9841D1F">
             <kie:width>50.0</kie:width>
             <kie:width>100.0</kie:width>
-            <kie:width>304.0</kie:width>
+            <kie:width>774.0</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_E8D3B386-AA2A-484B-99EB-99FB283EC4B1"/>
+          <kie:ComponentWidths dmnElementRef="_DCDBCFD0-C5D8-41C8-AF7B-D8288D43729A">
+            <kie:width>774.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_A58BF7B3-836A-40AF-AB1D-C75FC1776558">
+            <kie:width>774.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_EFB305D3-FE11-457A-B17A-6FBC6C6CEE7A">
+            <kie:width>50.0</kie:width>
+            <kie:width>151.0</kie:width>
+            <kie:width>256.0</kie:width>
+            <kie:width>467.0</kie:width>
+          </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
       <dmndi:DMNShape id="dmnshape-_CD975BC5-27E5-47BC-BF3B-C246E930B50A" dmnElementRef="_CD975BC5-27E5-47BC-BF3B-C246E930B50A" isCollapsed="false">
