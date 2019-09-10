@@ -92,6 +92,11 @@
           </dmn:rule>
         </dmn:decisionTable>
       </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:literalExpression id="_1C91990F-E704-4C27-832F-4493E3984CE1">
+          <dmn:text>BMI Category</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
     </dmn:context>
   </dmn:decision>
   <dmndi:DMNDI>
@@ -124,15 +129,18 @@
             <kie:width>256.0</kie:width>
             <kie:width>467.0</kie:width>
           </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_1C91990F-E704-4C27-832F-4493E3984CE1">
+            <kie:width>944.0</kie:width>
+          </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
-      <dmndi:DMNShape id="dmnshape-_CD975BC5-27E5-47BC-BF3B-C246E930B50A" dmnElementRef="_CD975BC5-27E5-47BC-BF3B-C246E930B50A" isCollapsed="false">
+      <dmndi:DMNShape id="dmnshape-_C94D28D7-4AE6-47E0-B44B-B080A625FF21" dmnElementRef="_C94D28D7-4AE6-47E0-B44B-B080A625FF21" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="576" y="80" width="100" height="50"/>
+        <dc:Bounds x="424" y="180" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_7100AFD8-C086-464B-B7B8-59675EF45D7A" dmnElementRef="_7100AFD8-C086-464B-B7B8-59675EF45D7A" isCollapsed="false">
@@ -144,6 +152,15 @@
         <dc:Bounds x="252" y="180" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_CD975BC5-27E5-47BC-BF3B-C246E930B50A" dmnElementRef="_CD975BC5-27E5-47BC-BF3B-C246E930B50A" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="576" y="80" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_6855BD6E-CED4-483A-A217-BF6B204BD0F2" dmnElementRef="_6855BD6E-CED4-483A-A217-BF6B204BD0F2" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -151,15 +168,6 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="358" y="81" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_C94D28D7-4AE6-47E0-B44B-B080A625FF21" dmnElementRef="_C94D28D7-4AE6-47E0-B44B-B080A625FF21" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="424" y="180" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-_27001FC6-8270-4F6A-947B-DCFEDA6D00FB" dmnElementRef="_27001FC6-8270-4F6A-947B-DCFEDA6D00FB">
