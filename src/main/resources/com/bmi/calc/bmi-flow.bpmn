@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_w-81ENRlEem8ONKW2X7qvw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_7NGrINRlEem8ONKW2X7qvw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_HeightItem" structureRef="Integer"/>
   <bpmn2:itemDefinition id="_WeightItem" structureRef="Integer"/>
   <bpmn2:itemDefinition id="__ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_namespaceInputXItem" structureRef="java.lang.String"/>
   <bpmn2:itemDefinition id="__ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_modelInputXItem" structureRef="java.lang.String"/>
   <bpmn2:itemDefinition id="__ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_decisionInputXItem" structureRef="java.lang.String"/>
+  <bpmn2:itemDefinition id="__ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_HeightInputXItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="__ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_WeightInputXItem" structureRef="Integer"/>
   <bpmn2:process id="bmi.bmi-flow" drools:packageName="com.bmi.calc" drools:version="1.0" drools:adHoc="false" name="bmi-flow" isExecutable="true">
     <bpmn2:property id="Height" itemSubjectRef="_HeightItem" name="Height"/>
     <bpmn2:property id="Weight" itemSubjectRef="_WeightItem" name="Weight"/>
@@ -31,52 +33,64 @@
     <bpmn2:startEvent id="_1CE5E6B1-39E0-4BF5-915A-F6958F0274E1">
       <bpmn2:outgoing>_EF1BEC91-7460-4748-B9D7-78D4BB055C76</bpmn2:outgoing>
     </bpmn2:startEvent>
-    <bpmn2:businessRuleTask id="_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3" name="Task" implementation="http://www.jboss.org/drools/dmn">
+    <bpmn2:businessRuleTask id="_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3" name="Calculate BMI" implementation="http://www.jboss.org/drools/dmn">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Task]]></drools:metaValue>
+          <drools:metaValue><![CDATA[Calculate BMI]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_EF1BEC91-7460-4748-B9D7-78D4BB055C76</bpmn2:incoming>
       <bpmn2:outgoing>_93B5691D-1C1B-47C0-8290-147C0CB64E87</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_w-81EdRlEem8ONKW2X7qvw">
+      <bpmn2:ioSpecification id="_7NHSMNRlEem8ONKW2X7qvw">
         <bpmn2:dataInput id="_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_namespaceInputX" drools:dtype="java.lang.String" itemSubjectRef="__ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_namespaceInputXItem" name="namespace"/>
         <bpmn2:dataInput id="_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_decisionInputX" drools:dtype="java.lang.String" itemSubjectRef="__ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_decisionInputXItem" name="decision"/>
         <bpmn2:dataInput id="_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_modelInputX" drools:dtype="java.lang.String" itemSubjectRef="__ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_modelInputXItem" name="model"/>
-        <bpmn2:inputSet id="_w-81EtRlEem8ONKW2X7qvw">
+        <bpmn2:dataInput id="_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_HeightInputX" drools:dtype="Integer" itemSubjectRef="__ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_HeightInputXItem" name="Height"/>
+        <bpmn2:dataInput id="_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_WeightInputX" drools:dtype="Integer" itemSubjectRef="__ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_WeightInputXItem" name="Weight"/>
+        <bpmn2:inputSet id="_7NHSMdRlEem8ONKW2X7qvw">
           <bpmn2:dataInputRefs>_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_namespaceInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_decisionInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_modelInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_HeightInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_WeightInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_w-81E9RlEem8ONKW2X7qvw">
+      <bpmn2:dataInputAssociation id="_7NHSMtRlEem8ONKW2X7qvw">
         <bpmn2:targetRef>_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_namespaceInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_w-81FNRlEem8ONKW2X7qvw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_w-81FdRlEem8ONKW2X7qvw"><![CDATA[https://kiegroup.org/dmn/_A01BA340-289F-4255-9F73-E68C8F568770]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_w-81FtRlEem8ONKW2X7qvw">_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_namespaceInputX</bpmn2:to>
+        <bpmn2:assignment id="_7NHSM9RlEem8ONKW2X7qvw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_7NHSNNRlEem8ONKW2X7qvw"><![CDATA[https://kiegroup.org/dmn/_A01BA340-289F-4255-9F73-E68C8F568770]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_7NHSNdRlEem8ONKW2X7qvw">_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_namespaceInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_w-81F9RlEem8ONKW2X7qvw">
+      <bpmn2:dataInputAssociation id="_7NHSNtRlEem8ONKW2X7qvw">
         <bpmn2:targetRef>_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_decisionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_w-81GNRlEem8ONKW2X7qvw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_w-81GdRlEem8ONKW2X7qvw"><![CDATA[Find BMI]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_w-81GtRlEem8ONKW2X7qvw">_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_decisionInputX</bpmn2:to>
+        <bpmn2:assignment id="_7NHSN9RlEem8ONKW2X7qvw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_7NHSONRlEem8ONKW2X7qvw"><![CDATA[Find BMI]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_7NHSOdRlEem8ONKW2X7qvw">_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_decisionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_w-81G9RlEem8ONKW2X7qvw">
+      <bpmn2:dataInputAssociation id="_7NHSOtRlEem8ONKW2X7qvw">
         <bpmn2:targetRef>_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_modelInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_w-81HNRlEem8ONKW2X7qvw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_w-81HdRlEem8ONKW2X7qvw"><![CDATA[bmi]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_w-81HtRlEem8ONKW2X7qvw">_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_modelInputX</bpmn2:to>
+        <bpmn2:assignment id="_7NHSO9RlEem8ONKW2X7qvw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_7NHSPNRlEem8ONKW2X7qvw"><![CDATA[bmi]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_7NHSPdRlEem8ONKW2X7qvw">_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_modelInputX</bpmn2:to>
         </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_7NHSPtRlEem8ONKW2X7qvw">
+        <bpmn2:sourceRef>Height</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_HeightInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_7NHSP9RlEem8ONKW2X7qvw">
+        <bpmn2:sourceRef>Weight</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3_WeightInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
     </bpmn2:businessRuleTask>
     <bpmn2:endEvent id="_BD8D1E87-2954-4E50-A944-E0A18C49C55A">
       <bpmn2:incoming>_93B5691D-1C1B-47C0-8290-147C0CB64E87</bpmn2:incoming>
     </bpmn2:endEvent>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_w-9cINRlEem8ONKW2X7qvw">
-    <bpmndi:BPMNPlane id="_w-9cIdRlEem8ONKW2X7qvw" bpmnElement="bmi.bmi-flow">
+  <bpmndi:BPMNDiagram id="_7NHSQNRlEem8ONKW2X7qvw">
+    <bpmndi:BPMNPlane id="_7NHSQdRlEem8ONKW2X7qvw" bpmnElement="bmi.bmi-flow">
       <bpmndi:BPMNShape id="shape__BD8D1E87-2954-4E50-A944-E0A18C49C55A" bpmnElement="_BD8D1E87-2954-4E50-A944-E0A18C49C55A">
         <dc:Bounds height="56.0" width="56.0" x="477.0" y="103.0"/>
       </bpmndi:BPMNShape>
@@ -96,12 +110,12 @@
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_w-9cItRlEem8ONKW2X7qvw" type="BPSimData">
+  <bpmn2:relationship id="_7NHSQtRlEem8ONKW2X7qvw" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3" id="_w-9cI9RlEem8ONKW2X7qvw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_ED6D6A6E-EA75-47E9-86B6-7BE169BC1CF3" id="_7NHSQ9RlEem8ONKW2X7qvw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -121,7 +135,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_1CE5E6B1-39E0-4BF5-915A-F6958F0274E1" id="_w-9cJNRlEem8ONKW2X7qvw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_1CE5E6B1-39E0-4BF5-915A-F6958F0274E1" id="_7NHSRNRlEem8ONKW2X7qvw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -131,7 +145,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_w-81ENRlEem8ONKW2X7qvw</bpmn2:source>
-    <bpmn2:target>_w-81ENRlEem8ONKW2X7qvw</bpmn2:target>
+    <bpmn2:source>_7NGrINRlEem8ONKW2X7qvw</bpmn2:source>
+    <bpmn2:target>_7NGrINRlEem8ONKW2X7qvw</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
